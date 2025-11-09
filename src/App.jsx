@@ -1,14 +1,22 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import InProgressPage from './pages/InProgressPage';
-import DevelopmentPage from './pages/DevelopmentPage';
+import HomePage from './pages/HomePage';
+import UnderConstructionPage from './pages/UnderConstructionPage';
+import ProjectDetailPage from './pages/ProjectDetailPage';
+import ScrollToTop from './components/ScrollToTop';
+import ProjectsListPage from './pages/ProjectsListPage';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<InProgressPage />} />
-      <Route path="/dev" element={<DevelopmentPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<UnderConstructionPage />} />
+        <Route path="/dev" element={<HomePage />} />
+        <Route path="/projects" element={<ProjectsListPage />} />
+        <Route path="/project/:projectId" element={<ProjectDetailPage />} />
+      </Routes>
+    </>
   );
 }
 

@@ -10,10 +10,12 @@ module.exports = {
         brand: {
           green: '#16a34a', // A nice, vibrant green
           dark: '#14532d',
+          cream: '#FBF9F4',
         },
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        serif: ['Georgia', 'serif'],
       }
     },
   },
