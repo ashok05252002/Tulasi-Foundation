@@ -38,9 +38,9 @@ const galleryImagesPool = [
 ];
 
 const floorPlanImagesPool = [
-  'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1631557731211-32b854f9eba1?q=80&w=2070&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1581467643590-3754871f3b39?q=80&w=2070&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=2070&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?q=80&w=2070&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1600585153488-a8a7c8052994?q=80&w=2070&auto=format&fit=crop',
 ];
 
 const surroundingFeatureImages = {

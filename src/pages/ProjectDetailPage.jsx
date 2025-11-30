@@ -15,7 +15,7 @@ const ProjectDetailPage = () => {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
         <h1 className="text-3xl font-bold">Project Not Found</h1>
-        <Link to="/dev" className="mt-4 text-brand-green hover:underline">
+        <Link to="/" className="mt-4 text-brand-green hover:underline">
           Back to Home
         </Link>
       </div>

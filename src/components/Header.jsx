@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === '/dev';
+  const isHomePage = location.pathname === '/';
 
   const [isScrolled, setIsScrolled] = useState(false);
   const logoUrl = 'https://i.postimg.cc/MHHy3Zzx/Screenshot-2025-11-08-at-12-30-53-PM.png';
@@ -28,13 +28,14 @@ const Header = () => {
   }, [location.pathname]);
 
   const navLinks = [
-    { href: '/dev', label: 'Home' },
+    { href: '/', label: 'Home' },
     { href: '/projects', label: 'Our Projects' },
-    { href: '/dev#about', label: 'About Us' },
-    { href: '/dev#services', label: 'Services' },
+    { href: '/#about', label: 'About Us' },
+    { href: '/#services', label: 'Services' },
   ];
 
-  const headerClasses = `fixed top-0 left-0 right-0 z-30 transition-all duration-300 bg-white ${isEffectivelyScrolled ? 'shadow-md' : ''}`;
+  // Header is always white background now as per previous request, but keeping logic clean
+  const headerClasses = `fixed top-0 left-0 right-0 z-30 transition-all duration-300 bg-white ${isScrolled || !isHomePage ? 'shadow-md' : ''}`;
   
   const linkColor = 'text-brand-dark';
   const contactButtonClasses = 'bg-brand-green text-white hover:bg-brand-dark';
@@ -44,7 +45,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/dev" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <img src={logoUrl} alt="Tulasi Foundation Logo" className="h-12 md:h-14 w-auto" />
             </Link>
           </div>
@@ -57,7 +58,7 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="/dev#contact"
+              href="/#contact"
               className={`font-semibold px-5 py-2 rounded-lg transition-colors ${contactButtonClasses}`}
             >
               Contact Us
@@ -82,7 +83,7 @@ const Header = () => {
                 </a>
               ))}
               <a
-                href="/dev#contact"
+                href="/#contact"
                 className="bg-brand-green text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-brand-dark transition-colors"
               >
                 Contact Us
