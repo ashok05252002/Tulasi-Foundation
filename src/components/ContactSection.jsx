@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Printer, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 const ContactInfoCard = ({ icon, title, lines }) => (
   <div className="flex items-start space-x-4">
@@ -67,21 +67,21 @@ const ContactSection = () => {
                 <ContactInfoCard 
                   icon={<MapPin className="h-8 w-8 text-brand-green" />}
                   title="Our Main Office"
-                  lines={['SoHo 94 Broadway St', 'New York, NY 1001']}
+                  lines={['No-21, Sargunavethi, West colony', 'Nagercoil - 629 001']}
                 />
               </div>
               <div className="bg-white p-6 shadow-lg rounded-lg">
                 <ContactInfoCard 
                   icon={<Phone className="h-8 w-8 text-brand-green" />}
                   title="Phone Number"
-                  lines={['234-9876-5400', '888-0123-4567 (Toll Free)']}
+                  lines={['+91 9443349064']}
                 />
               </div>
               <div className="bg-white p-6 shadow-lg rounded-lg">
                 <ContactInfoCard 
                   icon={<Mail className="h-8 w-8 text-brand-green" />}
                   title="Email"
-                  lines={['info@tulasifoundation.com']}
+                  lines={['contact@tulasifoundation.com']}
                 />
               </div>
           </div>
